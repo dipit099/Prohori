@@ -1,0 +1,125 @@
+@import "../../variables.css";
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Backdrop Section */
+.home-backdrop {
+    max-width: 1200px;
+    height: 70vh; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%;
+}
+
+/* Left: Overlay Content */
+.home-overlay {
+    flex: 1;
+    max-width: 40%;
+    background: var(--background-color2);
+    padding: 20px;
+    color: var(--text-same);
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+.home-overlay h1 {
+    font-size: clamp(24px, 4vw, 48px);
+    
+}
+
+/* Description */
+.home-overlay p {
+    font-size: clamp(14px, 1.5vw, 18px);
+    margin-top: 10px;
+    color: var(--text-low);
+    text-align: center;
+}
+
+/* Button */
+.home-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 15px;
+    background-color: var(--accent-color1);
+    color: var(--text-same);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: var(--accent-color2);
+}
+
+/* Button Container */
+.home-btn-div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Right: GIF Background */
+.home-backdrop-overlay {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: 130%; /* Stretch full height */
+    overflow: hidden;
+}
+
+/* Looping GIF Effect */
+.background-animation {
+    width: 100%;
+    height: 100%;
+    min-height: 100%; /* Ensures full coverage */
+    object-fit: cover;
+    animation: gifLoop 15s linear infinite; /* Smooth looping effect */
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .home-backdrop {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .home-overlay {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .home-btn-div {
+        justify-content: center;
+    }
+
+    .home-backdrop-overlay {
+        max-width: 150%;
+        height: auto;
+    }
+
+    .background-animation {
+        width: 120%;
+        height: auto;
+    }}

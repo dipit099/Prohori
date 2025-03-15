@@ -1,0 +1,43 @@
+:root {
+    --background-color1: #E6EFF8; /* Soft misty blue for a neutral background */
+    --background-color2: #F2F7FD; /* Slightly brighter sky blue */
+    --footer-color: #1B2836; /* Deep navy for contrast */
+
+    --primary-color: #6EB5C0; /* Soft cyan-green for a modern touch */
+    --secondary-color: #5B8FD3; /* Strong but calming blue */
+
+    --alert-color1: #D82330; /* Vibrant red for crime alerts */
+    --alert-color2: #9C2DE5; /* Deep violet for urgent notifications */
+
+    --accent-color1: #0147A8; /* Bold blue for clickable elements */
+    --accent-color2: #6021A8; /* Strong violet for call-to-actions */
+
+    --text-high: #14212B; /* Rich dark navy for readability */
+    --text-low: #475569; /* Softer contrast for secondary text */
+    --text-normal: #000000; /* Default text color */
+    --text-same: #FFFFFF; /* White for high contrast areas */
+    --text-same2: #b7b8c3;
+}
+
+
+[data-theme="dark"] {
+    --background-color1: #1A102A; /* Deep violet for a strong dark theme */
+    --background-color2: #2B1B3D; /* Slightly lighter purple for depth */
+    --footer-color: #D8CFF5; /* Soft lavender for clear contrast */
+
+    --primary-color: #6A0DAD; /* Rich royal purple for authority & awareness */
+    --secondary-color: #8A2BE2; /* Electric violet for a dynamic feel */
+
+    --alert-color1: #E63946; /* Sharper red for high-urgency alerts */
+    --alert-color2: #FF6F91; /* Vibrant pinkish-purple for warnings */
+
+    --accent-color1: #B97ADB; /* Muted purple for buttons and UI elements */
+    --accent-color2: #9D4EDD; /* Deep purple for consistent theming */
+
+    --text-high: #F5E9FF; /* Soft cream-lavender for easy readability */
+    --text-low: #D4C2E3; /* Light purple-gray for additional contrast */
+    --text-normal: #FFFFFF; /* White for clean UI */
+    --text-same: #000000; /* Black for reverse contrast */
+    --text-same2: #696d91;
+}
+

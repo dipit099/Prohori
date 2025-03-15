@@ -1,0 +1,115 @@
+@import "../../variables.css";
+.role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.role-selection label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.role-selection input {
+    cursor: pointer;
+}
+
+/* Background Blur Overlay */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    backdrop-filter: blur(5px); /* Blurred background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Container */
+.auth-popup {
+    background: var(--background-color2);
+    padding: 20px;
+    border-radius: 8px;
+    width: min(90%, 400px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+/* Form Inputs */
+.auth-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-popup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-low);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.auth-popup button {
+    background: var(--accent-color1);
+    color: var(--text-same);
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-popup button:hover {
+    background: var(--accent-color2);
+}
+
+/* Footer Links */
+.auth-footer {
+    margin-top: 10px;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--accent-color2);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .auth-popup {
+        width: 90%;
+    }
+}

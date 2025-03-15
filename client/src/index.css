@@ -1,0 +1,129 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Default font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color1);
+  color: var(--text-normal);
+  min-height: 100vh;
+  font-size: clamp(16px, 1.2vw, 20px);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: auto;
+  padding: min(2vw, 20px);
+}
+
+/* Typography */
+.title-font, h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: bold;
+  color: var(--text-high);
+  text-align: center;
+}
+
+.big-font, h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 10px 0;
+  color: var(--text-low);
+}
+
+.medium-font, h3 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin: 0;
+  color: var(--text-high);
+}
+
+.description, p {
+  font-size: clamp(16px, 1.2vw, 20px);
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-low);
+}
+
+/* Buttons */
+button {
+  font-size: clamp(16px, 1.5vw, 20px);
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Flexbox Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: min(2vw, 20px);
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: min(2vw, 20px);
+  background-color: var(--background-color2);
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: bold;
+  color: var(--text-normal);
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+}
+
+/* Footer */

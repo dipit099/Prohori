@@ -1,0 +1,78 @@
+@import "../../variables.css";
+
+.footer {
+    background-color: var(--footer-color);
+    color: var(--text-same);
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    max-width: 50%;
+}
+
+.footer-left h2 {
+    font-size: clamp(20px, 2vw, 24px);
+    margin-bottom: 5px;
+    color: var(--text-same);
+}
+
+.footer-left p {
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--text-same2);
+}
+
+.footer-right {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.footer-right nav {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.footer-right a {
+    color: var(--text-same);
+    text-decoration: none;
+    font-size: clamp(14px, 1.5vw, 16px);
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: var(--accent-color1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        max-width: 100%;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
+
+    .footer-right nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}

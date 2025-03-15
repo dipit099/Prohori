@@ -1,0 +1,500 @@
+@import "../../variables.css";
+
+/* Main Feed Container */
+.crime-feed-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+/* Left Section - Posts */
+.crime-feed-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Right Section - Filters & Sorting */
+.crime-feed-right {
+    width: 30%;
+    padding: 15px;
+    background: var(--background-color1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.crime-feed-right h2 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: bold;
+    color: var(--accent-color1);
+    text-align: center;
+}
+
+/* What's on your mind? Button */
+.whats-on-mind-btn {
+    padding: 12px;
+    font-size: clamp(14px, 1.5vw, 18px);
+    background-color: var(--secondary-color);
+    color: var(--text-same);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.whats-on-mind-btn:hover {
+    background-color: var(--accent-color1);
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--background-color2);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* Posts Section */
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Post Card */
+.post-card {
+    background: var(--background-color1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+}
+
+.post-card h3 {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: bold;
+    color: var(--accent-color1);
+}
+
+.post-card p {
+    font-size: clamp(12px, 1.2vw, 16px);
+    color: var(--text-low);
+}
+
+.post-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.post-images img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.post-actions button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: clamp(12px, 1.2vw, 16px);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.post-actions button:nth-child(1) {
+    background-color: var(--accent-color1);
+    color: var(--text-same);
+}
+
+.post-actions button:nth-child(2) {
+    background-color: var(--alert-color1);
+    color: var(--text-same);
+}
+
+.post-actions button:nth-child(3) {
+    background-color: var(--secondary-color);
+    color: var(--text-same);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-same);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: var(--text-low);
+    cursor: not-allowed;
+}
+
+/* Filter & Sorting */
+.crime-feed-right select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--text-low);
+    font-size: clamp(12px, 1.2vw, 16px);
+    background: var(--background-color2);
+    outline: none;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Post & Comment Modal */
+.post-modal, .comment-modal {
+    background: var(--background-color1);
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.post-modal h3, .comment-modal h3 {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: bold;
+    color: var(--accent-color1);
+}
+
+/* Inputs */
+.post-modal input, .post-modal textarea, .comment-modal textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--text-low);
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* Buttons */
+.close-btn {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--alert-color1);
+}
+
+/* Loading Spinner */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid var(--accent-color1);
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* === Comments Modal Styling === */
+.comments-modal {
+    background: #ffffff;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* Close Button */
+.comments-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Comment List */
+.comments-modal ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Individual Comment */
+.comment-item {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Comment Text */
+.comment-item p {
+    margin: 0;
+    flex: 1;
+}
+
+/* Comment Image */
+.comment-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crime-feed {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crime-feed-left, .crime-feed-right {
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .posts-container {
+        width: 100%;
+    }
+
+    .post-card {
+        width: 100%;
+    }
+
+    .post-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .crime-feed-right {
+        order: -1;
+        margin-bottom: 15px;
+    }
+
+    .post-modal, .comment-modal {
+        width: 95%;
+    }
+}
+
+
+/* Emergency Contacts Section */
+.emergency-contacts {
+    background: var(--background-color2);
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--accent-color1);
+    max-width: 100%;
+}
+
+.emergency-contacts h4 {
+    color: var(--accent-color1);
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Individual Contact Item */
+.contact-item {
+    background: var(--background-color1);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-item p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-high);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Contact Type Tag */
+.contact-type {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.hospital { background: #e74c3c; color: white; }
+.local_police { background: #3498db; color: white; }
+.fire_service { background: #e67e22; color: white; }
+.ambulance { background: #27ae60; color: white; }
+.helpline { background: #9b59b6; color: white; }
+
+/* Report Contact Button */
+.report-contact-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 6px;
+}
+
+.report-contact-btn:hover {
+    background: darkred;
+}
+
+/* Reported Badge */
+.reported-badge {
+    background: orange;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}

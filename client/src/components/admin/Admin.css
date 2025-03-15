@@ -1,0 +1,228 @@
+@import "../../variables.css";
+
+.admin-dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Users Section */
+.admin-dashboard .users-section {
+    flex: 1;
+    background: var(--background-color2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.admin-dashboard .users-section h2 {
+    color: var(--accent-color1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.admin-dashboard .users-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-dashboard .users-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--text-low);
+}
+
+.admin-dashboard .ban-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-dashboard .ban-btn:hover {
+    background: darkred;
+}
+
+/* Posts Section */
+.admin-dashboard .posts-section {
+    flex: 2;
+    background: var(--background-color1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.admin-dashboard .posts-section h2 {
+    color: var(--accent-color1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.admin-dashboard .posts-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-dashboard .posts-section li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+    border-bottom: 1px solid var(--text-low);
+    background: var(--background-color2);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.admin-dashboard .post-images {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-top: 8px;
+}
+
+.admin-dashboard .post-images img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-dashboard .post-images img:hover {
+    transform: scale(1.1);
+}
+
+.admin-dashboard .delete-btn,
+.admin-dashboard .flag-check-btn,
+.admin-dashboard .verify-btn {
+    background: var(--accent-color2);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.admin-dashboard .delete-btn:hover {
+    background: darkred;
+}
+
+.admin-dashboard .flag-check-btn {
+    background: #f39c12;
+}
+
+.admin-dashboard .flag-check-btn:hover {
+    background: #e67e22;
+}
+
+.admin-dashboard .verify-btn {
+    background: #2ecc71;
+}
+
+.admin-dashboard .verify-btn:hover {
+    background: #27ae60;
+}
+
+.admin-dashboard .verified-badge {
+    background: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Scrollbar Styling */
+.admin-dashboard .posts-section::-webkit-scrollbar,
+.admin-dashboard .users-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-dashboard .posts-section::-webkit-scrollbar-thumb,
+.admin-dashboard .users-section::-webkit-scrollbar-thumb {
+    background: var(--text-low);
+    border-radius: 10px;
+}
+
+.admin-dashboard .posts-section::-webkit-scrollbar-thumb:hover,
+.admin-dashboard .users-section::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color1);
+}
+
+/* Modal */
+.admin-dashboard .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.admin-dashboard .post-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.admin-dashboard .post-modal h2 {
+    color: var(--accent-color1);
+}
+
+.admin-dashboard .post-modal p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.admin-dashboard .post-modal ul {
+    padding: 0;
+    list-style: none;
+}
+
+.admin-dashboard .post-modal li {
+    background: var(--background-color2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.admin-dashboard .close-btn {
+    background: gray;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-dashboard .close-btn:hover {
+    background: black;
+}
